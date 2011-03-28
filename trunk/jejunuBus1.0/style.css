@@ -1,0 +1,10 @@
+
+#schedule ul{
+	list-style-type: none;
+	float: left;
+}
+
+#information{
+	clear: both;
+	float: right;
+}

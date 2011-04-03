@@ -10,25 +10,7 @@ $goDownSchedule = array(805, 820, 835, 850, 905, 920, 935, 950, 1005, 1015,
 
 // echo "server time is : ". date("G",time()) .":". date("i", time()).":". date("s",time());
 echo "<div id = 'schedule'>";
-
-echo "<ul id = 'goOver'>";
-echo "<li> 정문->해대</li>";
-foreach($goOverSchedule as $schedule){
-	echo "<li>";
-	printf('%02d시 %02d분',$schedule/100, $schedule%100);
-	echo "</li>";
-}
-echo "</ul>";
-
-echo "<ul id = 'goDown'>";
-echo "<li> 해대->정문</li>";
-foreach($goDownSchedule as $schedule){
-	echo "<li>";
-	printf('%02d시 %02d분',$schedule/100, $schedule%100);
-	echo "</li>";
-}
-echo "</ul>";
-echo "<br /> ";
-
 echo "</div>";
+echo "<div>
+	<input id='changeSchedule' type='button' value='전체보기'/></div>"
 ?>

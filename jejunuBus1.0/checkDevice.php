@@ -1,6 +1,6 @@
 ﻿<?php
 
-if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'],'iPod')){
+if(preg_match('/iPhone | iPad/', $_SERVER['HTTP_USER_AGENT'])){
 
 echo "1. 화면 하단에 메뉴(?)버튼을 누릅니다.";
 echo "<img src='./img/webPage.jpg'/>";
@@ -20,7 +20,9 @@ echo "4. 웹페이지가 추가 되었습니다.";
 echo "<br />";
 echo "<img src='./img/iconList.jpg'/>";
 echo "<br />";
-
+              
 echo "<br />";
+} else if(preg_match('/Android/', $_SERVER['HTTP_USER_AGENT'])){
+	echo "제작필요."
 }
 ?>

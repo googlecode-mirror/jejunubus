@@ -12,8 +12,8 @@ function changeScheduleClick(){
 	var div = $("schedule");
 	var el = $("changeSchedule");
 
-	div.removeChild($("goOver"));
-	div.removeChild($("goDown"))
+	if($("goOver") != null) div.removeChild($("goOver"));
+	if($("goDown") != null) div.removeChild($("goDown"))
 	
 	var id = el.value;
 	

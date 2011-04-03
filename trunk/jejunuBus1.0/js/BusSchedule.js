@@ -235,9 +235,8 @@ BusSchedule.prototype.findTimeOfGoOverSchedule = function(){
 	var min = strpad(currentTime.getMinutes(), 2, "00");
 	var findTime = hour + "" + min;
 	
-	findTime = "700";
 	var result = -1;
-	for(var i = 0; this.goOverSchedule.length; i++){		
+	for(var i = 0; i < this.goOverSchedule.length; i++){		
 		if(this.goOverSchedule[i] >= findTime) return i;		
 	}
 	return result;
@@ -247,10 +246,10 @@ BusSchedule.prototype.findTimeOfGoDownSchedule = function(){
 	var currentTime = new Date();
 	var hour = currentTime.getHours();
 	var min = strpad(currentTime.getMinutes(), 2, "00");
+	var findTime = hour + "" + min;
 	
-	findTime = "0700";
 	var result = -1;
-	for(var i = 0; this.goOverSchedule.length; i++){		
+	for(var i = 0; i < this.goOverSchedule.length; i++){		
 		if(this.goDownSchedule[i] >= findTime) return i;		
 	}
 	return result;

@@ -1,4 +1,4 @@
-Event.observe(window, "load", function(){loadMethod();});
+﻿Event.observe(window, "load", function(){loadMethod();});
 var busSchedule = new BusSchedule(); 
 
 function loadMethod(){

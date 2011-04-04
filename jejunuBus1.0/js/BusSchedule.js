@@ -1,4 +1,4 @@
-
+﻿
 var BusSchedule = Class.create();
 BusSchedule.prototype.initialize = function(domGoOverSchedule, domGoDownSchedule){
 	this.goOverSchedule = new Array(750, 805, 820, 835, 850, 905, 920, 935, 950

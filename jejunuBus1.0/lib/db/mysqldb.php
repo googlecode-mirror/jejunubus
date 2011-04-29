@@ -2,10 +2,11 @@
 class mysqldb
 {	
 	private $mydb;
-	private $host = "localhost";
-	private $id = "jinhyeok";
-	private $passwd = "kang1226";
-	
+	private $host = "mysql2.hosting.paran.com";
+	private $id = "jejunubus";
+	private $passwd = "sne95ic19";
+	protected $factor = 6;	
+
 	function mysqldb()
 	{
 	}
@@ -19,7 +20,7 @@ class mysqldb
 			print ("MySQL접속에 실패하였습니다.") ;
 			die ( mysql_error () );
 		} 
-		mysql_select_db ( 'jejubus', $mydb ); 
+		mysql_select_db ( 'jejunubus_db', $mydb ); 
 	}
 	
 	function write()
@@ -45,10 +46,10 @@ class mysqldb
 		}
 		else
 		{
-			$limit = ($page-1)*6;
+			$limit = ($page-1)*$this->factor;
 		}
 
-		$read = "SELECT * FROM board order by no desc limit ".$limit.",6";
+		$read = "SELECT * FROM board order by no desc limit ".$limit.",".$this->factor;
 		$result = mysql_query($read,$this->mydb);
 		
 		while($row_array = mysql_fetch_array($result))
@@ -66,7 +67,7 @@ class mysqldb
 		$result = mysql_query($select,$this->mydb);
 
 		$total = mysql_num_rows($result);
-		$limit = $total / 6;
+		$limit = $total / $this->factor;
 
 		return ceil($limit);
 	}

@@ -1,16 +1,19 @@
 <?php
 class mysqldb
-{	
+{
+	//MySQL 접속정보	
 	private $mydb;
 	private $host = "mysql2.hosting.paran.com";
 	private $id = "jejunubus";
 	private $passwd = "sne95ic19";
+	//불러올 게시물 개수
 	protected $factor = 6;	
 
 	function mysqldb()
 	{
 	}
 	
+	//MySQL 접속 함수
 	function connect()
 	{
 		$mydb = mysql_connect ( $this->host, $this->id, $this->passwd );
@@ -23,6 +26,7 @@ class mysqldb
 		mysql_select_db ( 'jejunubus_db', $mydb ); 
 	}
 	
+	//게시글 DB 입력 함수
 	function write()
 	{
 		$name = $_POST['title'];
@@ -33,6 +37,7 @@ class mysqldb
 		mysql_query($submit,$this->mydb);
 	}
 
+	//게시글 DB에서 읽어오는 함수
 	function read($page = 1)
 	{
 		$limit = 0;
@@ -52,15 +57,10 @@ class mysqldb
 		$read = "SELECT * FROM board order by no desc limit ".$limit.",".$this->factor;
 		$result = mysql_query($read,$this->mydb);
 		
-		while($row_array = mysql_fetch_array($result))
-		{
-			echo("<div class=\"viewform\"> 
-			<div class=\"name\"> 작성자 : $row_array[name] </div>
-			<div class=\"content\"> $row_array[content] </div>
-			</div>");
-		}
+		return $result;	
 	}
 	
+	//전체 게시글 패이지수 계산함수
 	function limitpage()
 	{
 		$select = "SELECT * FROM board";

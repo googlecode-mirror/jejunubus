@@ -23,7 +23,11 @@ class mysqldb
 			print ("MySQL접속에 실패하였습니다.") ;
 			die ( mysql_error () );
 		} 
-		mysql_select_db ( 'jejunubus_db', $mydb ); 
+		mysql_select_db ( 'jejunubus_db', $mydb );
+		// 2011.5.1 
+		// 인코딩 통일을 위한 코드 추가 
+		// 수정자 : 고시철 
+		mysql_query("set names 'utf8'");
 	}
 	
 	//게시글 DB 입력 함수

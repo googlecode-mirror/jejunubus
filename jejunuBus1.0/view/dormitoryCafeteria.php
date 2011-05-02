@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=deivce-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 
 <?php
-include_once '../bot/dormitoryDatabase.php';
+include_once '../updateContent/dormitory/dormitoryDatabase.php';
 
 $database = new dormitoryDatabase();
 

@@ -1,15 +1,14 @@
-﻿<?php
-echo "<div id = 'information'>";
-echo "<a href='./checkDevice.php'><h3>현재 페이지를 <br />앱아이콘으로만들기</h3></a>";
-echo "<a href='./contributor.php'><h3>이 사람들이 만듭니다.</h3></a>";
-echo "현재 페이지를 예쁘게 꾸며주실분을 찾습니다.";
-echo "<br />";
-echo "이 서비스를 함께 발전 시켜나갈 분을 찾습니다.";
-echo "<br />";
-echo "kosicheol@gmail.com로연락주세요.";
-echo "<br />";
-echo "<br />";
-echo "<a href='http://code.google.com/p/jejunubus'>jejunubus</a>에서 프로젝트 진행 현황을 알수 있습니다.";
-echo "<br />";
-echo "</div>";
-?>
+﻿
+<div id = 'information'>
+<a href='./checkDevice.php'><h3>앱처럼 사용할래 </h3></a>
+<a href='./contributor.php'><h3>내가 만들었지롱 ㅋㅋ </h3></a>
+<a href='./view/dormitoryCafeteria.php'> <h3>숙사밥 </h3></a>
+<a href='./board.php'?><h3>좋은아이디어 있어</h3></a>
+발 디자인에서 해방 시켜주실 후광을 발산하시는 분(디자이너), <br />
+손으로 코딩하는게 심심해서 발로 코딩하시는 분(프로그래머), <br />
+이 서비스에 접속자수를 폭발적으로 증가시킬수 있는 분(아이디어) , <br />
+kosicheol@gmail.com로연락주세요. <br />
+당신의 도움을 기다립니다. <br />
+<br />
+<a href='http://code.google.com/p/jejunubus'>code.google.com/p/jejunubus</a>에서 프로젝트에 대한 내용을 볼수 있습니다. <br />
+</div>

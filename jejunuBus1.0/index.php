@@ -17,6 +17,8 @@ include './bus_schedule.php';
 
 include './footer.php';
 
+//include './test/ipcheck.php';
+//include './test/game.php';
 ?>
 
 </body>

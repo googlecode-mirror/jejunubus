@@ -74,16 +74,6 @@ class mysqldb
 		$limit = $total / $this->factor;
 
 		return ceil($limit);
-	}
-
-	function delete()
-	{
-	
-	}
-	
-	function update()
-	{
-	
 	}	
 }	
 ?>

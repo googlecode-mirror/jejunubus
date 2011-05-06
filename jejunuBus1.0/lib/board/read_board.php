@@ -50,22 +50,22 @@ if($page == 1)
 	if($page < $db->limitpage())
 	{
 		$nextpage = $page + 1;
-		echo("<div class=\"nextpage\"><a href=\"http://117.17.102.207/board.php?page=". $nextpage ."\">". ">" ."</a></div>");
+		echo("<div class=\"nextpage\"><a href=\"../../board.php?page=". $nextpage ."\">". ">" ."</a></div>");
 	}
 }
 //Page가 DB에 저장된 게시물의 Page와 같을경우
 else if($page == $db->limitpage())
 {
 	$backpage = $page -1;
-	echo("<div class=\"backpage\"><a href=\"http://117.17.102.207/board.php?page=". $backpage ."\">". "<" ."</a></div>");
+	echo("<div class=\"backpage\"><a href=\"../../board.php?page=". $backpage ."\">". "<" ."</a></div>");
 }
 //Page가 DB에 저장된 게시물의 Page보다 작고 1 Page보다 클경우
 else
 {
 	$nextpage = $page + 1;
 	$backpage = $page - 1;
-	echo("<div class=\"backpage\"><a href=\"http://117.17.102.207/board.php?page=". $backpage ."\">". "<" ."</a></div>");
-	echo("<div class=\"nextpage\"><a href=\"http://117.17.102.207/board.php?page=". $nextpage ."\">". ">" ."</a></div>");
+	echo("<div class=\"backpage\"><a href=\"../../board.php?page=". $backpage ."\">". "<" ."</a></div>");
+	echo("<div class=\"nextpage\"><a href=\"../../board.php?page=". $nextpage ."\">". ">" ."</a></div>");
 }
 echo("<div>". $page ."</div>");
 

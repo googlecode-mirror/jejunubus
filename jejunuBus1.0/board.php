@@ -18,8 +18,8 @@ echo("<div id=\"boardform\">
 	<div id=\"writeform\">
 		<form method=\"post\" action=\"./lib/board/write_board.php\">
 			<textarea class=\"content\" rows=\"5\" cols=\"40\" name=content>좋은 의견 많이 주세요~ *^^*</textarea>
-			<input class=\"name\" type=\"text\" class=\"namebox\" name=title value=\"작성자\">
-			<input class=\"submit\" type=\"submit\" class=\"submit\" value=\"Submit\">
+			<input class=\"name\" type=\"text\" name=title value=\"작성자\">
+			<input class=\"submit\" type=\"submit\" value=\"Submit\">
 		</form>
 	</div>
 	");

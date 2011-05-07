@@ -1,9 +1,9 @@
 <?php
 
-include_once './simple_html_dom.php';
-include_once './dormitoryDBFactory.php';
-include_once './dormitoryDatabase.php';
-include_once './menu.php';
+include_once 'simple_html_dom.php';
+include_once 'dormitoryDBFactory.php';
+include_once 'dormitoryDatabase.php';
+include_once 'menu.php';
 
 class dormitoryParser {
 
@@ -63,11 +63,9 @@ class dormitoryParser {
 		$timeTable = $this->html->find('table',$this->timeTableIndex);
 
 	//	echo iconv("EUC-KR", "UTF-8", $timeTable);
+	
 	}
 	
-	function isUpdated(){
-		
-		return true;
-	}
+	
 }
 ?>

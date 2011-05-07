@@ -28,6 +28,19 @@ class dormitoryDatabase {
 		
 		return mysql_query($query, $this->connection);
 	}
+
+	function update($table, $attribute, $value, $condition){
+		$query = "UPDATE $table SET $attribute = $value WHERE $condition";
+		mysql_query($query, $this->connection);
+	}
 	
+	function select($table, $attributes = '*', $condition = ''){
+		if(!$condition == ''){
+			$condition = 'WHERE '.$condition;
+		}
+		$query = "SELECT $attributes FROM $table $condition";
+		
+		return mysql_query($query, $this->connection);
+	}
 }
 ?>

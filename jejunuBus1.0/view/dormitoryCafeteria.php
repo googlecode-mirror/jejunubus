@@ -9,7 +9,6 @@ $database = new dormitoryDatabase();
 $menu = $database->selectAll();
 ?>
 <ul>
-<li>신관은 개발중입니다.</li>
 <li>--기숙사--</li>
 <?php 
 

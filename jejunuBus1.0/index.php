@@ -17,7 +17,7 @@ include './bus_schedule.php';
 
 ?>
 <div id = 'information'>
-<a href='./checkDevice.php'><h3>앱처럼 사용할래 </h3></a>
+<a href='./howToCreateShortcutIcon.php'><h3>앱처럼 사용할래 </h3></a>
 <a href='./contributor.php'><h3>내가 만들었지롱 ㅋㅋ </h3></a>
 <a href='./view/dormitoryCafeteria.php'> <h3>기숙사밥 </h3></a>
 <a href='./board.php'><h3>좋은아이디어 있어</h3></a>

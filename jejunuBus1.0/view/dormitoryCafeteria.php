@@ -1,5 +1,11 @@
+<html>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=deivce-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="../css/defaultStyle.css"/>
+</head>
+
+<body>
 
 <?php
 include_once '../updateContent/dormitory/dormitoryDatabase.php';
@@ -7,7 +13,9 @@ include_once '../updateContent/dormitory/dormitoryDatabase.php';
 $database = new dormitoryDatabase();
 
 $menu = $database->selectAll();
+
 ?>
+
 <ul>
 <li>--기숙사--</li>
 <?php 
@@ -23,6 +31,7 @@ while($row = mysql_fetch_array($menu)){
   <br />
 <?php 
 }
+flush();
 ?>
 </ul>
 <ul>
@@ -41,4 +50,8 @@ while($row = mysql_fetch_array($menu)){
 <li> 아침 : 07:30 - 09:00</li>
 <li> 저녁 : 17:30 - 19:00</li>
 </ul>
+<iframe id='back' src = '../updateContent/updateContent.php'>
+<p></p></iframe>
+</body>
+</html>
 

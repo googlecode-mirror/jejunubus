@@ -12,7 +12,7 @@ class dormitory{
 	}
 	
 	function cafeteria(){
-		$isFirst = self::isFirst(); 
+		$isFirst = self::isFirstOfDay(); 
 		
 		if($isFirst){
 			$this->dormitory->dormitoryCafeteria();	
@@ -26,7 +26,7 @@ class dormitory{
 		}
 	}
 	
-	function isFirst(){
+	function isFirstOfDay(){
 		$table = 'updateSchedule';
 		$attribute = 'dormitory_updated';
 		

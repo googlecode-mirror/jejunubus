@@ -11,19 +11,18 @@ class dormitory{
 		$this->database = new dormitoryDatabase;
 	}
 	
-	function cafeteria(){
+	function parsing(){
 		$isFirst = self::isFirstOfDay(); 
 		
 		if($isFirst){
 			$this->dormitory->dormitoryCafeteria();	
 			
-		}else {
-			$table = 'updateSchedule';
-			$attribute = 'dormitory_updated';
-			$updateValue = 'now()';
-			$condition = 'id = 1';
-			$this->database->update($table, $attribute, $updateValue, $condition);
 		}
+		$table = 'updateSchedule';
+		$attribute = 'dormitory_updated';
+		$updateValue = 'now()';
+		$condition = 'id = 1';
+		$this->database->update($table, $attribute, $updateValue, $condition);
 	}
 	
 	function isFirstOfDay(){

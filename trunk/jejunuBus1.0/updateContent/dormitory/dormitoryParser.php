@@ -15,13 +15,10 @@ class dormitoryParser {
 	var $dormitoryMeal = "dormitoryMeal";
 	
 	var $html;
-	var $connection;
 	var $database;
 	var $menu;
 	
 	function __construct() {
-		
-		$this->connection = dormitoryDBFactory::getdormitoryDBConnection();
 		$this->database = new dormitoryDatabase;
 		$this->html = file_get_html($this->url);
 	}
@@ -34,7 +31,7 @@ class dormitoryParser {
 //		$weeklyTitle = iconv("EUC-KR", "UTF-8", $weeklyTitle);
 //		echo strip_tags($weeklyTitle)."<br />";
 		
-		$this->menu = new menu();
+		$this->menu = new Menu();
 		
 		foreach ($this->dayOfWeekIndex as $dayIndex){
 			

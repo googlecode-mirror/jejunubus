@@ -7,8 +7,7 @@ class dormitoryDatabase {
 	var $connection;
 	
 	function __construct(){
-		$this->factory  = new dormitoryDBFactory;
-		$this->connection = $this->factory->getdormitoryDBConnection();
+		$this->connection = dormitoryDBFactory::getdormitoryDBConnection();
 		mysql_select_db("jejunubus_db", $this->connection);
 		mysql_query("set names 'utf8'");
 	}

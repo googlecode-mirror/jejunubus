@@ -1,5 +1,5 @@
 <?php
-class menu{
+class Menu{
 	
 	var $food = array(array('','','','',''), 
 						array('','','','',''), 

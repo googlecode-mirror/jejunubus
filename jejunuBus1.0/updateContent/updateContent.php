@@ -5,6 +5,6 @@ include_once $root.'/dormitory.php';
 
 $dormitory = new dormitory;
 
-$dormitory->cafeteria();
+$dormitory->parsing();
 
 ?>

@@ -1,6 +1,6 @@
 소스 파일에 라이센스 내용 첨부해주세요.
 
-신관 메뉴 파싱
+신관 메뉴 파싱 - 너무 느림...
 
 데이터베이스 관리하는 유틸 있으면 좋을듯??(
 updateContent/dormitory/dormitoryDatabase.php,

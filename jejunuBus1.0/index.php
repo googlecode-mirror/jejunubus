@@ -5,49 +5,25 @@
 	<meta name="viewport" content="width=deivce-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<link rel="shortcutIcon" href="./img/shortcutIcon.png"/>
 	<link rel="stylesheet" type="text/css" href="./css/defaultStyle.css"/> 
+	<link rel="stylesheet" type="text/css" href="./css/DormitoryBus.css"/> 
+	<script type="text/javascript" src="./js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="./js/DormitorybusJquery.js"></script>
+	
 </head>
 <body>
 <?php 
 
-include_once './bus/GoOverScheduler.php';
-include_once './bus/GoDownScheduler.php';
 
-$goOverScheduler = new GoOverScheduler();
-$goDownScheduler = new GoDownScheduler();
-
-$suggestedGoOverSchedule = $goOverScheduler->suggest();
-$suggestedGoDownSchedule = $goDownScheduler->suggest();
-
-?>
-<div id = 'schedule'>
-<ul id = 'goOver'>
-<li>정문 to 해대</li>
-<?php
-foreach ($suggestedGoOverSchedule as $schedule) {
-	$time = $schedule->getTime();
-	echo "<li id = {$time}>";
-	printf('%02d시 %02d분', $time / 100, $time % 100);
-	echo "</li>";
+$hour = date("Hi", time(0));
+if($hour < 1930){
+	include_once './view/BusScheduleView.php';	
+}else{
+	include_once './view/DormitoryBusForFinalExam.php';	
 }
+
 ?>
-</ul>
-<ul id = 'goDown'>
-<li>해대 to 정문</li>
-<?php 
-foreach ($suggestedGoDownSchedule as $schedule) {
-	$time = $schedule->getTime();
-	if($schedule->isStopByDormitory()){
-		echo "<li id = {$schedule->getTime()} class = stopByDormitory>";
-	}else{
-		echo "<li id = {$schedule->getTime()}>";
-	}
-	
-	printf('%02d시 %02d분', $time / 100, $time % 100);
-	echo "</li>";
-}
-?>
-</ul>
-</div>
+
+
 
 <div id = 'information'>
 <h3><a href='./howToCreateShortcutIcon.php'>앱처럼 사용할래 </a></h3>

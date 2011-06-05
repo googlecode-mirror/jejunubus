@@ -9,6 +9,10 @@
 	float: right;
 }
 
+.stopByDormitory{
+	color: #FF0000;
+}
+
 #back{
 	frameborder: 0;
 	width: 0;

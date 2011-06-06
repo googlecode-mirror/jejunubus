@@ -4,22 +4,28 @@ $("#oldJejuExtra").hide();
 $("#newJeju").hide();
 
   $("#goOldJeju li:lt(3)").click(function(){
-    $("#oldJeju").toggle();
+	$("#oldJeju").show();
+    $("#oldJejuExtra").hide();
+    $("#newJeju").hide();
   });
   $("#goOldJeju li:eq(3)").click(function(){		  
-    $("#oldJejuExtra").toggle();
+	$("#oldJeju").hide();
+    $("#newJeju").hide();
+    $("#oldJejuExtra").show();
   });
   $("#goNewJeju").click(function(){
-	  $("#newJeju").toggle();
+	  $("#oldJeju").hide();
+	  $("#newJeju").show();
+	  $("#oldJejuExtra").hide();
   });
   $("#oldJeju").click(function(){
-	  $("#oldJeju").toggle();
+	  $("#oldJeju").hide();
   });
   $("#newJeju").click(function(){
-	  $("#newJeju").toggle();
+	  $("#newJeju").hide();
   });
   $("#oldJejuExtra").click(function(){
-	  $("#oldJejuExtra").toggle();
+	  $("#oldJejuExtra").hide();
   });
   
 });

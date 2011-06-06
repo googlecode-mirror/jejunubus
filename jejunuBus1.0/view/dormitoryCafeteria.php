@@ -2,13 +2,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=deivce-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<link rel="stylesheet" type="text/css" href="../css/defaultStyle.css"/>
+<link rel="stylesheet" type="text/css" href="../css/DormitoryCafeteria.css"/>
 </head>
 
 <body>
 
 <?php
-include_once '../updateContent/dormitory/dormitoryDatabase.php';
+include_once '../dormitory/dormitoryDatabase.php';
 
 $database = new dormitoryDatabase();
 
@@ -17,7 +17,6 @@ $menu = $database->selectAll();
 ?>
 
 <ul>
-<li>--기숙사--</li>
 <?php 
 
 while($row = mysql_fetch_array($menu)){

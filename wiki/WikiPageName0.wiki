@@ -1,5 +1,5 @@
+#summary 초기 버전인 0.0 버전에 대한 설명
 #labels Phase-Design
-#초기 버전인 0.0 버전에 대한 설명
 
 = Introduction =
 

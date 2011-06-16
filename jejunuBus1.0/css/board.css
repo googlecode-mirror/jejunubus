@@ -1,5 +1,6 @@
 *
 {
+	-webkit-text-size-adjust:none;
 	padding:0;
 	margin:0;
 }
@@ -7,7 +8,7 @@
 #boardform
 {
 	float:left;
-	width:350px;
+	width:100% ;
 	margin-right:auto;	
 	margin-left:auto;
 	height:auto;
@@ -17,7 +18,7 @@
 #writeform
 {
 	float:left;
-	width:340px;
+	width:97% ;
 	padding:3px;
 	height:auto;
 	margin-bottom:10px;
@@ -27,7 +28,7 @@
 .viewform
 {
 	float:left;
-	width:340px;
+	width:97% ;
 	padding:3px;
 	height:50px,auto;
 	word-break:break-all;
@@ -39,7 +40,7 @@
 {
 	float:left;
 	text-align:center;
-	width:100px;
+	width:29% ;
 	height:auto;
 	background-color:aliceblue;
 	margin-left:120px;
@@ -71,7 +72,7 @@
 .submit
 {
 	float:right;
-	width:80px;
+	width:23% ;
 	height:auto;
 	margin-top:3px;
 	margin-right:3px;
@@ -83,7 +84,7 @@
 	float:left;
 	margin-left:auto;
 	margin-right:auto;
-	width:330px;
+	width:94% ;
 	height:auto;
 	margin-top:5px;
 	margin-bottom:5px;

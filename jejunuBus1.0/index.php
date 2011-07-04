@@ -27,20 +27,20 @@
 	</script>
 </head>
 <body>
-<a href=../jejunubus0.0/index.php id='oldVersionLink'>Old버전</a><br />
 <?php 
-
-
+// 방학기간이라 순환버스의 시간 및 시험기간 버스 표시안함.
 $hour = date("Hi", time(0));
-if($hour < 1930 && $hour > 220){
-	include_once './view/BusScheduleView.php';	
-}else{
-	include_once './view/DormitoryBusForFinalExam.php';	
-}
-
+//if($hour < 1930 && $hour > 220){
+//	include_once './view/BusScheduleView.php';	
+//}else{
+//	include_once './view/DormitoryBusForFinalExam.php';	
+//}
 ?>
 
-
+<?php
+if($hour > 1930 || $hour < 100) 
+	include_once './view/DormitoryBus.php';
+?>
 
 <div id = 'information'>
 <h3><a href='./howToCreateShortcutIcon.php'>앱처럼 사용할래 </a></h3>

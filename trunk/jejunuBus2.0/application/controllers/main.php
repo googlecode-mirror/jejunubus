@@ -7,6 +7,6 @@ class main extends CI_Controller{
 	}
 	
 	function index() {
-		echo 'hello JejunuBus 2.0 ver';
+		$this->load->view('main');
 	}
 }

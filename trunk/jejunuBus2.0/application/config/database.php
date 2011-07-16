@@ -37,6 +37,24 @@
 | The $active_record variables lets you determine whether or not to load
 | the active record class
 */
+$active_group = 'jejunubus';
+$active_record = TRUE;
+
+$db['jejunubus']['hostname'] = 'mysql2.hosting.paran.com';
+$db['jejunubus']['username'] = 'jejunubus';
+$db['jejunubus']['password'] = 'sne95ic19';
+$db['jejunubus']['database'] = 'jejunubus_db';
+$db['jejunubus']['dbdriver'] = 'mysql';
+$db['jejunubus']['dbprefix'] = '';
+$db['jejunubus']['pconnect'] = TRUE;
+$db['jejunubus']['db_debug'] = TRUE;
+$db['jejunubus']['cache_on'] = FALSE;
+$db['jejunubus']['cachedir'] = '';
+$db['jejunubus']['char_set'] = 'utf8';
+$db['jejunubus']['dbcollat'] = 'utf8_general_ci';
+$db['jejunubus']['swap_pre'] = '';
+$db['jejunubus']['autoinit'] = TRUE;
+$db['jejunubus']['stricton'] = FALSE;
 
 $active_group = 'default';
 $active_record = TRUE;

@@ -32,8 +32,8 @@
 <li> 아침 : 07:30 - 09:00</li>
 <li> 저녁 : 17:30 - 19:00</li>
 </ul>
-<!--<iframe id='back' src = '../updateContent/updateContent.php'>
-<p></p></iframe>-->
+<iframe id='back' src = 'main'>
+<p></p></iframe>
 </body>
 </html>
 

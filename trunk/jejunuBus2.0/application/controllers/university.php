@@ -1,12 +1,14 @@
 <?php
-class UniversityCafeteria extends CI_Controller{
+class university extends CI_Controller{
 	
-	function UniversityCafeteria(){
+	function university(){
 		parent::__construct();
-		
 	}
 	
 	function index() {
+	}
+	
+	function cafeteria(){
 		$this->load->view('universityCafeteria');
 	}
 }

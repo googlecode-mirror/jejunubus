@@ -1,12 +1,16 @@
 <?php
-class dormitoryCafeteria extends CI_Controller{
+class dormitory extends CI_Controller{
 	
-	function dormitoryCafeteria(){
+	function dormitory(){
 		parent::__construct();
 		
 	}
 	
 	function index() {
+		
+	}
+	
+	function cafeteria(){
 		$this->load->database('jejunubus');
 		
 		$this->db->select('menuDate, earlyMorning, breakfast, lunch, dinner');

@@ -21,6 +21,13 @@ class DormitoryRepository{
 		$this->ci->db->query('DELETE FROM dormitoryMeal');
 	}
 	
+	function insertDoneToCafeUpdate(){
+		$this->ci->db->query("UPDATE updateSchedule SET state='1' where id='1'");
+	}
+	function insertError($desc){
+		$this->ci->db->query("INSERT INTO errorLog(description) VALUES ('$desc')");
+	}
+	
 	function insertMenuTable($menuTable){
 		$mealIndex = array('date'=>0, 'earlyMorning'=>1, 'breakfast'=>2, 'lunch'=>3, 'dinner'=>4);
 		$dormitoryMeal = "dormitoryMeal";

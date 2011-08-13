@@ -13,7 +13,7 @@ class dormitoryService {
 		$this->paser = new dormitoryParser($ci);
 	}
 	
-	function updateDormitoryCafeteria(){
+	function updateDorimitoryCafeteria(){
 		$this->paser->cafeteria();
 		$menuTable = $this->paser->getMenuTableToArray();
 		
@@ -23,6 +23,15 @@ class dormitoryService {
 	
 	function updateConnectionDate(){
 			$this->repository->updateConnectionDate();
+	}
+	
+	function markDoneToCafeUpdate(){
+		$this->repository->insertDoneToCafeUpdate();
+		
+	}
+	
+	function errorLog($errorDesc){
+		$this->repository->insertError($errorDesc);
 	}
 	
 	function isUpdatedToday(){

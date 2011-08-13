@@ -17,7 +17,6 @@ class dormitory extends CI_Controller{
 		$this->db->from('dormitoryMeal');
 		$data['menu'] = $this->db->get();
 		
-		$this->db->close();
 		$this->load->view('dormitoryCafeteria', $data);
 	}
 }

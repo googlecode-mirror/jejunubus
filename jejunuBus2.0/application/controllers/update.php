@@ -1,29 +1,32 @@
 <?php
 class update extends CI_Controller{
+	var $ds;
 	
 	function update(){
 		parent::__construct();
+		
+		$this->load->library('dormitory/dormitoryService');
+			
+		$this->ds = new dormitoryService();
 	}
 	
 	function index(){
-		echo "업데이트할 내용을 선택하세요.";
+		
 	}
 	
 	function dormitory($lastUrlParamater = "none"){
-			if("cafeteria" == $lastUrlParamater){
-			$this->load->library('dormitory/dormitoryService');
-			
-			$dormitoryService = new dormitoryService();
-
-			$firstContecter = $dormitoryService->isUpdatedToday();
+		if("cafeteria" == $lastUrlParamater){
+			$firstContecter = $this->ds->isUpdatedToday();
 			
 			if($firstContecter == true){
-				$dormitoryService->updateDormitoryCafeteria();
+				$this->ds->updateDorimitoryCafeteria();
 			}
-			$dormitoryService->updateConnectionDate();
-			echo "done";
+			
+			$this->ds->updateConnectionDate();
+			
+			$this->ds->markDoneToCafeUpdate();
 		}else{
-			show_404();
+			$this->ds->errorLog("update/dormitory/{$lastUrlParamater}:no match update paramater");
 		}
 	}
 }

@@ -19,7 +19,7 @@ class dormitory_parser {
 	function cafeteria(){
 		$this->ci->load->model('menu_table');
 		
-		$this->menu = new MenuTable();
+		$this->menu = new menu_table();
 		foreach ($this->dayOfWeekIndex as $dayIndex){
 			
 			$day = $this->html->find('tr', $dayIndex);

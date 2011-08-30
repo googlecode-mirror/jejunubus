@@ -5,9 +5,9 @@ class update extends CI_Controller{
 	function update(){
 		parent::__construct();
 		
-		$this->load->library('dormitory/dormitoryService');
+		$this->load->library('dormitory/dormitory_service');
 			
-		$this->ds = new dormitoryService();
+		$this->ds = new dormitory_service();
 	}
 	
 	function index(){

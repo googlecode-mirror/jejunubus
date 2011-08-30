@@ -9,8 +9,8 @@ class dormitory_service {
 		$ci->load->library('dormitory/dormitory_repository');	
 		$ci->load->library('dormitory/dormitory_parser');
 		
-		$this->repository = new DormitoryRepository();
-		$this->paser = new dormitoryParser($ci);
+		$this->repository = new dormitory_repository();
+		$this->paser = new dormitory_parser($ci);
 	}
 	
 	function updateDorimitoryCafeteria(){

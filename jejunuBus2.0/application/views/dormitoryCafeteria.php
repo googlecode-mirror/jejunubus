@@ -12,11 +12,11 @@
 		<?php foreach ($menu->result_array() as $meal):?>
 		<h5><?php echo $meal['menuDate']; ?> </h5>
 	  	<ul>
-			  <li><?php echo "조식 : ".$meal['earlyMorning']; ?> </li>
-			  <li><?php echo "아침 : ".$meal['breakfast']; ?> </li>
-			  <li><?php echo "점심 : ".$meal['lunch']; ?> </li>
-			  <li><?php echo "저녁 : ".$meal['dinner']; ?> </li>
-		  </ul>
+			<li><?php echo "조식 : ".$meal['earlyMorning']; ?> </li>
+			<li><?php echo "아침 : ".$meal['breakfast']; ?> </li>
+			<li><?php echo "점심 : ".$meal['lunch']; ?> </li>
+			<li><?php echo "저녁 : ".$meal['dinner']; ?> </li>
+		</ul>
 		<?php endforeach;?>
 		<h5>평 일</h5>
 		<ul>

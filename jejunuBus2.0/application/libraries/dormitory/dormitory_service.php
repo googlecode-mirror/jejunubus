@@ -1,13 +1,13 @@
 <?php
-class dormitoryService {
+class dormitory_service {
 	
 	var $repository;
 	var $paser;
 	
 	function __construct(){
 		$ci=&get_instance();
-		$ci->load->library('dormitory/DormitoryRepository');	
-		$ci->load->library('dormitory/dormitoryParser');
+		$ci->load->library('dormitory/dormitory_repository');	
+		$ci->load->library('dormitory/dormitory_parser');
 		
 		$this->repository = new DormitoryRepository();
 		$this->paser = new dormitoryParser($ci);

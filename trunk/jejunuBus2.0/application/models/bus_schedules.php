@@ -1,6 +1,6 @@
 <?php
 
-class BusSchedules extends CI_Model{
+class bus_schedules extends CI_Model{
 	var $goUpBus = array(800, 812, 824, 836, 848, 900, 912, 924, 936, 948,
 					1000, 1012, 1024, 1036, 1048, 1100, 1112, 1124, 1136, 1148, 
 					1212, 1236, 1300, 1324, 1348, 1400, 1412, 1424, 1436, 1448, 

@@ -1,5 +1,5 @@
 <?php
-class DormitoryRepository{
+class dormitory_repository{
 	var $ci;
 	
 	function __construct(){

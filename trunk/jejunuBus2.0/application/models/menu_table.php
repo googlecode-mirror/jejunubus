@@ -1,5 +1,5 @@
 <?php
-class MenuTable extends CI_Model{
+class menu_table extends CI_Model{
 	
 	var $food = array(array('','','','',''), 
 						array('','','','',''), 

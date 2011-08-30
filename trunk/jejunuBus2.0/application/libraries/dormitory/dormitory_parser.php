@@ -1,6 +1,6 @@
 <?php
 
-class dormitoryParser {
+class dormitory_parser {
 
 	var $dayOfWeekIndex = array('mon'=>4, 'tue'=>5, 'wed'=>6, 'thu'=>7, 'fri'=>8, 'sat'=>9, 'sun'=>10);
  	var $url= "http://dormitory.jejunu.ac.kr/board/adm/Recipe/restaurant.php";	
@@ -17,7 +17,7 @@ class dormitoryParser {
 	}
 	
 	function cafeteria(){
-		$this->ci->load->model('MenuTable');
+		$this->ci->load->model('menu_table');
 		
 		$this->menu = new MenuTable();
 		foreach ($this->dayOfWeekIndex as $dayIndex){

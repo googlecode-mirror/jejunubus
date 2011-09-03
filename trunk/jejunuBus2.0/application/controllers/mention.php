@@ -8,7 +8,7 @@ class mention extends CI_Controller{
 	function index() {
 		$this->load->helper('url');
 		
-		redirect('http://117.17.102.67/zend/jejunubus/jejunubus1.0/board.php');
+		redirect('http://jejunubus.hosting.paran.com/jejunubus1.0/board.php');
 	}
 }
 ?>

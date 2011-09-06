@@ -68,7 +68,7 @@
 					<a title="신관 식당 메뉴" href='university/cafeteria'>신관메뉴 </a>
 				</li>
 				<li class="jeju_citybus">
-					<a title="제주 시내버스 출발 시간표" href='jeju_citybus'>제주 시내 버스 출발 시간표</a>
+					<a title="제주 시내버스 출발 시간표" href='jeju_citybus'>제대 출발 버스시간표</a>
 				</li>
 				<li class="opinionBoard">
 					<a title="의견 게시판" href='mention'>의견게시판</a>

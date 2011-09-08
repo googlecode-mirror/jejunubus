@@ -19,18 +19,21 @@
 		<?php
 		
 		$currentTime = date('Hi');
-		$scope = 20;
-		$testTime = 0;
 		
-		//테스트값
-//		$testTime = 830;
-
-		$currentHour = (($currentTime / 100)- 0.5);
-		$currentHour = number_format($currentHour, 0,`.`,`,`); //소수점 0자리로
-		$currentHour = $currentHour;
-		$currentMinute = $currentTime % 100;
+		if($testTime == 0){
+			$testTime = 0;
+			$currentHour = (($currentTime / 100)- 0.5);
+			$currentHour = number_format($currentHour, 0,`.`,`,`); //소수점 0자리로
+			$currentHour = $currentHour;
+			$currentMinute = $currentTime % 100;
+			
+			echo '기준시간 : '.$currentHour.'시 '.$currentMinute.'분'; 
+			
+		}else{
+			echo '기준시간 : '.$testTime; 
+			
+		}
 		
-		echo '기준시간 : '.$currentHour.'시 '.$currentMinute.'분'; 
 		?>
 		<br>
 		<br>

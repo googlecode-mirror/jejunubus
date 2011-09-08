@@ -8,33 +8,31 @@ class jeju_citybus extends CI_Controller {
 
 	function index() {
 
-		//		phpinfo();
 
 		$this->load->database('jejunubus');
 		$currentTime = date('Hi');
 		
-		//view에도 scope쓴다
+		//테스트 코드 세개
 		$scope = 20;	
-		
-		//테스트용 view 페이지에 testTime도 바꿔줘야
-//		$testTime = 830;	
+		$testTime = 0;
 //		$currentTime = $testTime;
 		
 		$scopeTime = $this->getScopeTime($currentTime, $scope);
 		
-//		echo "범위시간" .$scopeTime;
-//		echo "기준시간" .$currentTime;
-
+	
 		//현재시간 위로 scope분 까지 긁어온다		
-				$data['citytime'] = $this->db->query('select * from jejuCityBusTime where ' .
+		$data['citytime'] = $this->db->query('select * from jejuCityBusTime where ' .
 						'(busTime >='.$currentTime.') && (busTime <='.$scopeTime.') Order by busTime asc');
 		
+		$data['scope'] = $scope;
+		$data['testTime'] = $testTime;
 		$this->load->view('jeju_citybus', $data);
 		
 
 	}
 	
 	function getScopeTime($currentTime, $scope){
+		
 		//시간에서 분 범위가 60분 이상 일 시에 시를 1올려주고 분을 60 빼준다
 		if ((($currentTime + $scope) % 100) >= 60) {
 			

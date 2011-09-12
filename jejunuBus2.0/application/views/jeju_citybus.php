@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/css/common.css">
 		
 		<style type="text/css">
-			#top li {float:left; margin-right:28px;}
+			#top li {float:left; margin-right:26px;}
 			#body li {float:left; margin-right:7px; width:85px;}
 			#body{clear:both;}
 			

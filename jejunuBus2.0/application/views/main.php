@@ -21,13 +21,20 @@
 	</head>
 	<body>
 		<div id='doc'>
+			<div id='special'>
+				<?php if(isset($special)){?>
+				<h6><?php echo $special; ?></h6>
+				<?php  }?>
+			</div>
 			<div id='bus'>
 			<?php if(isset($contents['up'])){?>
 				<div id='up'>
 					<h5>정문-></h5>
 					<ul id="goUpBus">
 						<?php foreach ($contents['up'] as $content):?>
-						<li<?php echo " value=".$content?>><?php printf("%02d : %02d", $content/100, $content%100);?></li>
+						<li<?php echo " value=".$content?>>
+							<?php printf("%02d : %02d", $content/100, $content%100);?>
+						</li>
 						<?php endforeach;?>
 					</ul>
 				</div>
@@ -35,7 +42,9 @@
 					<h5><-해대</h5>
 					<ul id="goDownBus">
 						<?php foreach ($contents['down'] as $content):?>
-						<li<?php echo " value=".$content?>><?php printf("%02d : %02d", $content/100, $content%100);?></li>
+						<li<?php echo " value=".$content?>>
+							<?php printf("%02d : %02d", $content/100, $content%100);?>
+						</li>
 						<?php endforeach;?>
 					</ul>
 				</div>
@@ -51,8 +60,7 @@
 			<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/bus.js"></script>
 			<script type="text/javascript">
 				
-				shortenBusSchedule("goUpBus");
-				shortenBusSchedule("goDownBus");
+			var hyosungToggle = new Secret({target:'bus',idSet:{goUpBus:'goUpBus', goDownBus:'goDownBus'}});
 				
 			</script>
 			<div class="cls">

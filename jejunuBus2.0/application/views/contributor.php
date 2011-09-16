@@ -19,15 +19,15 @@
 			<li>강진혁 jinhyeok.kang@gmail.com</li>
 		</ul>
 		
-<!--		<h4>도서관 담당</h4>-->
-<!--		<ul>-->
-<!--			<li>김세훈 ????</li>-->
-<!--		</ul>-->
-<!---->
-<!--		<h4>시내버스 담당</h4>-->
-<!--		<ul>-->
-<!--			<li>오도연 ????</li>-->
-<!--		</ul>-->
+		<h4>도서관 담당(개발중)</h4>
+		<ul>
+			<li>김세훈 kaist4150@naver.com</li>
+		</ul>
+
+		<h4>시내버스 담당</h4>
+		<ul>
+			<li>오도연 odyody12@gmail.com</li>
+		</ul>
 		<h4>프로젝트 참여자 </h4>
 		<ul>
 			<li>이성현 sunghyun3580@gmail.com</li>

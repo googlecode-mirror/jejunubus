@@ -21,11 +21,20 @@
 	</head>
 	<body>
 		<div id='doc'>
+			<div id='searchBar'>
+				<form action="test/sicheol" method="get">
+					<input type="text" value="책이름은??"></input>
+					<input type="submit" value="찾아봅시다!!"></input>
+				</form>
+			</div>
 			<div id='special'>
 				<?php if(isset($special)){?>
 				<h6><?php echo $special; ?></h6>
 				<?php  }?>
 			</div>
+			<script type="text/javascript">
+				self.location.hash = 'special';
+			</script>
 			<div id='bus'>
 			<?php if(isset($contents['up'])){?>
 				<div id='up'>

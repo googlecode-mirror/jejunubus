@@ -27,6 +27,21 @@ class test extends CI_Controller {
 		
 		$this->load->view('test', $data);
 	}
+	function sicheol(){
+		$libUrl = "http://lib.jejunu.ac.kr/DLiWeb20fr/components/searchir/result.aspx?m_var=421&srv_id=31&qy_frm=QUICK&adf=&adt=&cl_id=ALL&rid_all=&st_f=&st_o=&pg=1&rpp=30&mc=300&dp_op=LIST&t_path=&qy_typ=KEYWORD&brch=01&qy_idx=TITL&qy_kwd=a";
+		$page = file_get_contents($libUrl);
+		
+		$author = $this->getSpanContent($page,  '저자');
+		$publisher = $this->getSpanContent($page, '출판사');
+		$publish_date = $this->getSpanContent($page, '출판년도');
+		$title = $this->getTitleContent($page);
+		$book_location = $this->getBookLocation($page);
+		
+		echo "this is first title : ". $title[0]."<br>";
+		echo ", second to : ". $title[1]."<br>";
+		echo "and 3th : ". $title[2];
+		echo "<br>if you looking bad font, check your broswer encoding.";
+	}
 	
 	function getSources($url, $content){
 		

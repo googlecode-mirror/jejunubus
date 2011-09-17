@@ -88,7 +88,7 @@
 					<a title="제주 시내버스 출발 시간표" href='jeju_citybus'>제대 출발 버스시간표</a>
 				</li>
 				<li class="opinionBoard">
-					<a title="의견 게시판" href='board/page'>의견게시판</a>
+					<a title="의견 게시판" href='board/page/1'>의견게시판</a>
 				</li>
 				
 			</ul>

@@ -11,10 +11,15 @@
 	<div id=boardform>
 		<div id=writeform>
 			<form method=post action=http://jejunubus.hosting.paran.com/jejunubus2.0/index.php/board/page/1>
-				<textarea class=content rows=5 cols=40 name=content>좋은 의견 많이 주세요~ *^^*</textarea>
-				<input class=name type=text name=title value=작성자> 
+				<textarea id=comment class=content rows=5 cols=40 name=content>좋은 의견 많이 주세요~ *^^*</textarea>
+				<input id=author class=name type=text name=title value=작성자> 
 				<input class=submit type=submit value=Submit>
 			</form>
+			<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/board.js"></script> //js 임포트(??)
+			<script type="text/javascript">
+				clearText('comment');	//function실행.
+				clearText('author');
+			</script>
 		</div>
 	
 		<?php echo $feed;?>

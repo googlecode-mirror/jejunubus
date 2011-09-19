@@ -50,8 +50,16 @@
 				<div id='down'>
 					<h5><-해대</h5>
 					<ul id="goDownBus">
+						<?php $i = 0;?>
 						<?php foreach ($contents['down'] as $content):?>
+						<?php if($content == $contents['stopBy'][$i]){?>
+						<li<?php echo " class=stopBy value=".$content;?>>
+						<?php $i = $i < sizeof($contents['stopBy'])-1 ? $i+1 : $i;?>
+						<?php }else{?>
+						
+						
 						<li<?php echo " value=".$content?>>
+						<?php }?>
 							<?php printf("%02d : %02d", $content/100, $content%100);?>
 						</li>
 						<?php endforeach;?>
@@ -88,7 +96,7 @@
 					<a title="제주 시내버스 출발 시간표" href='jeju_citybus'>제대 출발 버스시간표</a>
 				</li>
 				<li class="opinionBoard">
-					<a title="의견 게시판" href='board/page/1'>의견게시판</a>
+					<a title="의견 게시판" href='board/page'>의견게시판</a>
 				</li>
 				
 			</ul>

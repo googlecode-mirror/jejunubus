@@ -17,7 +17,7 @@
 			</form>
 			<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/board.js"></script> //js 임포트(??)
 			<script type="text/javascript">
-				clearText('comment');	//function실행.
+				clearText('comment');	
 				clearText('author');
 			</script>
 		</div>

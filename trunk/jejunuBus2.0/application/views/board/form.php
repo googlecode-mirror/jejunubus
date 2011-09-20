@@ -15,7 +15,7 @@
 				<input id=author class=name type=text name=title value=작성자> 
 				<input class=submit type=submit value=Submit>
 			</form>
-			<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/board.js"></script> //js 임포트(??)
+			<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/board.js"></script> 
 			<script type="text/javascript">
 				clearText('comment');	
 				clearText('author');

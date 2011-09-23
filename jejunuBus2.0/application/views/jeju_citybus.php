@@ -25,7 +25,12 @@
 			$currentHour = (($currentTime / 100)- 0.5);
 			$currentHour = number_format($currentHour, 0,`.`,`,`); //소수점 0자리로
 			$currentHour = $currentHour;
+			
 			$currentMinute = $currentTime % 100;
+			
+			if($currentHour == -0){ //자정에 -0으로 표시되던 것을 수정
+				$currentHour = 0;
+			}
 			
 			echo '기준시간 : '.$currentHour.'시 '.$currentMinute.'분'; 
 			

@@ -12,7 +12,7 @@ class dormitory_parser {
 	
 	function __construct() {
 		$this->ci=&get_instance();
-		$this->ci->load->library('dormitory/simple_html_dom');
+		$this->ci->load->library('simple_html_dom');
 		$this->html = file_get_html($this->url);
 	}
 	

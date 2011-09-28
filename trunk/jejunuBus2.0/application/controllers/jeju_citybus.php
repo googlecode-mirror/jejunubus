@@ -12,10 +12,12 @@ class jeju_citybus extends CI_Controller {
 		$this->load->database('jejunubus');
 		$currentTime = date('Hi');
 		
-		//테스트 코드 세개
-		$scope = 20;	
-		$testTime = 0;
-//		$currentTime = $testTime;
+		//테스트 코드 
+		$scope = $this->putScope(20);	//범위는 20
+		$testTime = $this->putTestTime(0); //1710같이 넣으면 됨
+		if($testTime != 0){
+			$currentTime = $testTime;
+		}
 		
 		$scopeTime = $this->getScopeTime($currentTime, $scope);
 		
@@ -29,6 +31,13 @@ class jeju_citybus extends CI_Controller {
 		$this->load->view('jeju_citybus', $data);
 		
 
+	}
+	function putTestTime($temp){
+		return $temp;
+	}
+	
+	function putScope($temp){
+		return $temp;
 	}
 	
 	function getScopeTime($currentTime, $scope){

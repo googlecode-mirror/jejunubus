@@ -55,7 +55,7 @@ class LibrarieParser{
 //	}
 	
 	function getSpanContent($source, $tag_attribute){
-		preg_match_all("/<span[^>]*title=[\"']?".$tag_attribute."+[\"']?[^>]*>([^<\"']+)<\/span>/i", $source, $match);
+		preg_match_all("/<span[^>]*title=[\"']?".$tag_attribute."+[\"']?[^>]*>([^<]+)<\/span>/i", $source, $match);
 		
 		$values = $match[1];
 		

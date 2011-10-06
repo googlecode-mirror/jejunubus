@@ -22,19 +22,23 @@
 	<body>
 		<div id='doc'>
 			<div id='searchBar'>
-				<form action="test/sicheol" method="get">
-					<input type="text" value="책이름은??"></input>
+				<form action="librarie/search" method="get">
+					<input id="searchInputbox" type="text" name="keyword" value="책이름은??"></input>
 					<input type="submit" value="찾아봅시다!!"></input>
 				</form>
+				<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/board.js"></script>
+				<script type="text/javascript">
+					clearText('searchInputbox');	
+			</script>
 			</div>
 			<div id='special'>
 				<?php if(isset($special)){?>
 				<h6><?php echo $special; ?></h6>
 				<?php  }?>
-			</div>
 			<script type="text/javascript">
 				self.location.hash = 'special';
 			</script>
+			</div>
 			<div id='bus'>
 			<?php if(isset($contents['up'])){?>
 				<div id='up'>
@@ -93,13 +97,13 @@
 					<a title="신관 식당 메뉴" href='university/cafeteria'>신관메뉴 </a>
 				</li>
 				<li class="jeju_citybus">
-					<a title="제주 시내버스 출발 시간표" href='jeju_citybus'>제대 출발 버스시간표</a>
+					<a title="제주 시내버스 출발 시간표" href='jeju_citybus'>제대 출발 시내버스</a>
 				</li>
 				<li class="jeju_citybus">
-					<a title="제대 도서관" href='search'>제대 도서관</a>
+					<a title="제대 도서관" href='librarie'>도서관 도서검색</a>
 				</li>
 				<li class="opinionBoard">
-					<a title="의견 게시판" href='board/page'>의견게시판</a>
+					<a title="의견 게시판" href='board/page/1'>의견게시판</a>
 				</li>
 				
 			</ul>

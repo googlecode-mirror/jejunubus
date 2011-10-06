@@ -23,20 +23,23 @@ class LibrarieParser{
 			$publish_date = $this->getSpanContent($ele[$i], '출판년도');
 			$title = $this->getTitleContent($ele[$i]);
 			$location = $this->getBookLocation($ele[$i]);
-			
+						
 			$books[$i] = new Book();
-			if($location != null){
-			$books[$i]->setBook(array('title' => $title[0], 
-									'publisher' => $publisher[0],
-									'publishDate' => $publish_date[0],
-									'author' => $author[0],
-									'location' => $location[0])
-								);
-			}
+			if($location != null && 
+				$author != null && 
+				$publisher != null && 
+				$publish_date != null && 
+				$title != null){
+				$books[$i]->setBook(array('title' => $title, 
+										'publisher' => $publisher,
+										'publishDate' => $publish_date,
+										'author' => $author,
+										'location' => $location[0])
+									);
+				}
 		}
 		return $books;
 	}
-	
 //	function getBookCount($cid){
 //		$cid = $this->getValue($ele[$i]);
 //		$libUrl = "http://lib.jejunu.ac.kr/DLiWeb20fr/components/common/bookstock.aspx?cid=" . $cid;
@@ -56,25 +59,21 @@ class LibrarieParser{
 	
 	function getSpanContent($source, $tag_attribute){
 		preg_match_all("/<span[^>]*title=[\"']?".$tag_attribute."+[\"']?[^>]*>([^<]+)<\/span>/i", $source, $match);
-		
 		$values = $match[1];
-		
-		return $values;
+		return $values[0];
 	}
 	
 	function getTitleContent($source){
 		preg_match_all("/<input[^>]*type=[\"']?checkbox[\"']?[^>]*id=[\"']?chkCID[\"']?[^>]*title=[\"']?([^>]*)[\"']+>/i", $source, $match);
 		
 		$values = $match[1];
-		return $values;
+		return $values[0];
 	}
 	
 	function getBookLocation($source){
 		preg_match_all("/<a href=[\"']?javascript:toggle_bookstock[^>]*>([^<]*)/i", $source, $match);
 		
 		$values = $match[1];
-		
 		return $values;
-		
 	}
 }

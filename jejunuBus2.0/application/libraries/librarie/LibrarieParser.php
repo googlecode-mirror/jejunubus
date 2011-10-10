@@ -13,9 +13,25 @@ class LibrarieParser{
 	}
 		
 	function getBooks($ele){
+		$books = array();
+		$noResult = "";
+		if ($ele == $noResult){
+			$books[0] = new Book();
+			$author = "고시철";
+			$publish_date = "2011";
+			$publisher = "jejunuBus Project";
+			$title = "검색결과가 없습니다.";
+			$location = "공대4호관 405호";
+			$books[0]->setBook(array('title' => $title, 
+										'publisher' => $publisher,
+										'publishDate' => $publish_date,
+										'author' => $author,
+										'location' => $location)
+									);
+			return $books;
+		}
 		$bookElementRegularExpression = 'tr[id^=trCID_]';
 		$ele = $ele->find($bookElementRegularExpression);
-		$books = array();
 		
 		for ($i = 0; $i < sizeof($ele); $i++) {
 			$author = $this->getSpanContent($ele[$i],  '저자');

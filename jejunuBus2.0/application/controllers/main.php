@@ -11,7 +11,7 @@ class main extends CI_Controller{
 		$data['contents'] = array("dormi"=>2405);
 		$this->load->model('bus_schedules');
 		
-		if($time >600 && $time < 2000){
+		if($time > 600 && $time < 2000){
 			$bus = new bus_schedules();
 			$data['contents'] = array(	"up"=>$bus->getBusScheduleToUp(), 
 										"down"=>$bus->getBusScheduleToDown(),

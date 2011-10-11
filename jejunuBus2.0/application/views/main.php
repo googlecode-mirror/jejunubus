@@ -71,7 +71,7 @@
 				<script type="text/javascript">
 				var hyosungToggle = new Secret({target:'bus',idSet:{goUpBus:'goUpBus', goDownBus:'goDownBus'}});
 				</script>
-			<?php }?>
+			<?php }else {?>
 				<div id="lib">
 					<h5><?php echo $busTitle; ?></h5>
 					<ul id='libBus'>
@@ -89,6 +89,7 @@
 				<script type="text/javascript">
 					var fx = new Fx({target:'bus', idSet:{wayPoint:'wayPoint'}});
 				</script>
+			<?php }?>
 			</div>
 			<div class="cls">
 			</div>
@@ -102,11 +103,11 @@
 				<li class="universityCafeteria">
 					<a title="신관 식당 메뉴" href='university/cafeteria'>신관메뉴 </a>
 				</li>
-				<li class="jeju_citybus">
+				<li class="dormitoryCafeteria">
 					<a title="제주 시내버스 출발 시간표" href='jeju_citybus'>제대 출발 시내버스</a>
 				</li>
-				<li class="jeju_citybus">
-					<a title="제대 도서관" href='librarie'>도서관 도서검색</a>
+				<li class="universityCafeteria">
+					<a title="제대 도서관" href='librarie/meetingRoom'>중도나이트</a>
 				</li>
 				<li class="opinionBoard">
 					<a title="의견 게시판" href='board/page/1'>의견게시판</a>

@@ -11,6 +11,7 @@ class update extends CI_Controller{
 	}
 	
 	function index(){
+		$this->dormitory("cafeteria");
 		
 	}
 	

@@ -2,9 +2,11 @@ package com.kds.sicheol.example;
 
 public class main {
 	public static void main(String[] args) {
+		System.out.println("start");
 		System.out.println("-----");
 		System.out.println("hello");
 		System.out.println("-----");
+		System.out.println("-end-");
 		
 	}
 }

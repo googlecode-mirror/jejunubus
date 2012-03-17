@@ -7,37 +7,27 @@ class jeju_citybus extends CI_Controller {
 	}
 
 	function index() {
-
-
-		$this->load->database('jejunubus');
-		$currentTime = date('Hi');
-		
-		//테스트 코드 
-		$scope = $this->putScope(20);	//범위는 20
-		$testTime = $this->putTestTime(0); //1710같이 넣으면 됨
-		if($testTime != 0){
-			$currentTime = $testTime;
+		// 클라이언트에서 시간 던저주면 그시간 기준으로 버스시간 제공 
+		$isClientThrowMeTheTime = isset($_GET['clientTime']); 
+		if($isClientThrowMeTheTime){
+			$currentTime = $_GET['clientTime'];
+		}else{
+			$serverTime = date("Hi");
+			$currentTime = $serverTime;
 		}
 		
-		$scopeTime = $this->getScopeTime($currentTime, $scope);
+		//쿼리문에 들어가는 시간차이를 계산한다. 60진법과 10진법간의 차이조절(1시간 10분 빼기 20분은 50분, 하지만 110빼기 20은 90)
+		$betweenTwentyMinutes = 20;
+		$scopeTimeForQuery = $this->getScopeTime($currentTime, $betweenTwentyMinutes);
 		
-	
 		//현재시간 위로 scope분 까지 긁어온다		
+		$this->load->database('jejunubus');
 		$data['citytime'] = $this->db->query('select * from jejuCityBusTime where ' .
-						'(busTime >='.$currentTime.') && (busTime <='.$scopeTime.') Order by busTime asc');
+						'(busTime >='.$currentTime.') && (busTime <='.$scopeTimeForQuery.') Order by busTime asc');
 		
-		$data['scope'] = $scope;
-		$data['testTime'] = $testTime;
+		$data['scope'] = $betweenTwentyMinutes;
+		$data['clientTime'] = $currentTime;
 		$this->load->view('jeju_citybus', $data);
-		
-
-	}
-	function putTestTime($temp){
-		return $temp;
-	}
-	
-	function putScope($temp){
-		return $temp;
 	}
 	
 	function getScopeTime($currentTime, $scope){

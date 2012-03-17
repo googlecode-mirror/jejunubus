@@ -19,25 +19,20 @@
 		<?php
 		
 		$currentTime = date('Hi');
+		$currentTime = $clientTime;
 		
-		if($testTime == 0){
-			$testTime = 0;
-			$currentHour = (($currentTime / 100)- 0.5);
-			$currentHour = number_format($currentHour, 0,`.`,`,`); //소수점 0자리로
-			$currentHour = $currentHour;
-			
-			$currentMinute = $currentTime % 100;
-			
-			if($currentHour == -0){ //자정에 -0으로 표시되던 것을 수정
-				$currentHour = 0;
-			}
-			
-			echo '기준시간 : '.$currentHour.'시 '.$currentMinute.'분'; 
-			
-		}else{
-			echo '기준시간 : '.$testTime; 
-			
+		$currentHour = (($currentTime / 100)- 0.5);
+		$currentHour = number_format($currentHour, 0,`.`,`,`); //소수점 0자리로
+		$currentHour = $currentHour;
+		
+		$currentMinute = $currentTime % 100;
+		
+		if($currentHour == -0){ //자정에 -0으로 표시되던 것을 수정
+			$currentHour = 0;
 		}
+		
+		echo '기준시간 : '.$currentHour.'시 '.$currentMinute.'분'; 
+			
 		
 		?>
 		<br>
@@ -58,21 +53,10 @@
 			<li><?php echo $bustime['busNo'].'번'; ?> </li>
 			<!--<li><?php echo (($bustime['busTime']) - date('Hi')).'분전'; ?> </li>-->
 			<li><?php 
-				
-				if($testTime == 0){ 
-				//실제
-					if(($bustime['busTime'] % 100) < ($currentTime % 100)){
-						echo ((($bustime['busTime']) - $currentTime) - (60 - $scope)).'분전';
-					}else{
-						echo (($bustime['busTime']) - $currentTime).'분전'; 
-					}
-				}else{ 
-				//테스트
-					if(($bustime['busTime'] % 100) < ($testTime % 100)){
-						echo (($bustime['busTime']) - $testTime - (60 - $scope)).'분전';
-					}else{
-						echo (($bustime['busTime']) - $testTime).'분전';
-					}
+				if(($bustime['busTime'] % 100) < ($currentTime % 100)){
+					echo ((($bustime['busTime']) - $currentTime) - (60 - $scope)).'분전';
+				}else{
+					echo (($bustime['busTime']) - $currentTime).'분전'; 
 				}
 				?> </li>
 				
@@ -87,7 +71,7 @@
 		<br>
 		<h5> * 시내버스 시간표를 가지고 만든 페이지이기 때문에 100% 정확하지 않을 수 있습니다.</h5>
 		<br>
-		<h5> * 버스 출발 20분 전까지 표시됩니다.</h5>
+		<h5> * 버스 출발  <?php echo $scope ?>분 전까지 표시됩니다.</h5>
 		<br>
 		<h5> * 현재 평일 시간표만 제공하고 있습니다.</h5>
 		<br>

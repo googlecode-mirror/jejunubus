@@ -1,0 +1,9 @@
+#bookList {background-color:#DCE9F2;}
+#bookList .book {border-bottom:1px dashed #85A5CC; margin-top:10px; margin-bottom:10px; padding-left:10px;}
+#doc {background-color:#DCE9F2;}
+#page{overflow:hidden;}
+#page li {over-flow:hidden; width:32%; float:left; text-align:center; background:#85A5CC; margin-bottom:20px; padding:10px; margin-left:2%;}
+#page li a{display:block;}
+#searchBar input {width:30%;}
+#searchBar #searchInputbox {width:65%;}
+#page .goHome{width:10%; margin-left:2%;}

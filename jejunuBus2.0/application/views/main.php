@@ -59,9 +59,13 @@
 					</ul>
 				</div>
 				<script src="http://jejunubus.hosting.paran.com/js/touchScroller.js"></script>
+				<script src="http://jejunubus.hosting.paran.com/js/scrollbutton.js"></script>
+				
 				<script type="text/javascript">
 				var touchScrollableDivId = "bus";
 				touchScroll(touchScrollableDivId);
+				
+				scrollbutton('bus');
 			
 				</script>
 			<?php }else {?>

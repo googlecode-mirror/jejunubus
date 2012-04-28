@@ -7,8 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/css/mainView.css">
 		
 		<script src="http://jejunubus.hosting.paran.com/js/googleAnalytics.js"></script>
-		
-		
 	</head>
 	<body>
 		<div id='doc'>

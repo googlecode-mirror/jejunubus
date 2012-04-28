@@ -6,31 +6,34 @@ class main extends CI_Controller{
 	}
 	
 	function index() {
-		$time = date("Hi");
-
+		
 		if(isset($_GET['time'])){
 			$time = $_GET['time'];
+		}else{
+			$time = date("Hi");
 		}
 		
-		$data['contents'] = array("dormi"=>2405);
-		$this->load->model('bus_schedules');
+		$this->load->library('busService/BusService');
 		
-		if($time > 600 && $time < 2000){
-			$bus = new bus_schedules();
-			$data['contents'] = array(	"up"=>$bus->getBusScheduleToUp(), 
-										"down"=>$bus->getBusScheduleToDown(),
-										"stopBy"=>$bus->getBusScheduleStopBy()
-										);
-			
-			$data['special'] = "아래로 스크롤 하면 더 많은 시간을 확인 할수 있어요";
-		}else {
-		//	$data['busTitle'] = "시험기간엔 도서관 버스닷!!!!";
-		//	$data['contents'] = array("libBus"=>array(2405, 105, 205));
-			$data['special'] = "시간을 누르면 중도버스의 경유지를 볼수 있어요.";
-			$data['busTitle'] = "365일 언제나 중도버스";
-			$data['contents'] = array("libBus"=>array(2405));
-		}
-		$this->load->view('main', $data);
+		$bs = new BusService();
+		if($time > 730 && $time < 2000){
+			$data['goUpBus'] = $bs->getGoUpBusSchedule();
+			$data['goDownBus'] = $bs->getGoDownBusSchedule();
+		}else{
+			$data['libBus'] = $bs->getLibBusSchedule();
+		}	
+		//도서관 버스 필요.
+		// 스크롤 버튼 필요.
+		$data['weatherToday'] = 'should Todays RealTime Weather';
+		
+		$toStringType = true;
+		
+		$divs['bookSearchBarDiv'] = $this->load->view('layout/LibraryBookSearchBar', "", $toStringType);
+		$divs['topSuggestDiv'] = $this->load->view('layout/topSuggestLayout', $data, $toStringType);
+		$divs['menuIconListDiv'] = $this->load->view('layout/menuLayout',"", $toStringType);
+		
+		$this->load->view('layout/mainView', $divs);
+
 	}
 	
 	function test(){

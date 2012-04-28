@@ -3,7 +3,7 @@
 <head>
 <title>제주대 순환버스</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=deivce-width, initial-scale=0.43,maximum-scale=2.0,user-scalable=yes">
+	<meta name="viewport" content="width=device-width, initial-scale=0.43,maximum-scale=2.0,user-scalable=yes">
 	<link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/css/common.css">
 </head>
 <body>

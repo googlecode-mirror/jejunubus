@@ -10,6 +10,13 @@ class LibrarieService{
 		$this->paser = new LibrarieParser();
 	}
 	
+	function getMeetingRoom(){
+		$meetingRoomUrl ="http://203.253.194.57/MAPTEMP/1_180.182.28.169.html";
+		$html = $this->paser->request($meetingRoomUrl);
+		
+		return $html;
+	}
+	
 	function requestBookSearch($searchOption){
 		
 	

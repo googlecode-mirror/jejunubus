@@ -28,6 +28,10 @@ class librarie extends CI_Controller {
 	}
 	
 	function meetingRoom(){
+		// $this->load->library('librarie/LibrarieService');
+		// $service = new LibrarieService();
+		// echo $service->getMeetingRoom();
+		
 		$this->load->view('meetingRoom');
 	}
 	

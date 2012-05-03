@@ -1,27 +1,24 @@
-body{margin:0;}
-			ul, ol{list-style-type:none;}
-			p, ul, h1, h2, h3, h4, h5, h6{padding:0; margin:0;}
-			a{text-decoration:none;}
-			
-			#doc a{color:#000;}
-			
-			ul.mainMenu{overflow: hidden; width:100%; margin-bottom:10px;}
-			ul.mainMenu li{float:left; width:70px; height:80px; margin-right:5px; margin-left:5px;}
-			.mainMenu li a{display:block; padding-top:70px; font-size:8px; text-align:center; background-size:70px; background:url('http://jejunubus.hosting.paran.com/images/che.jpg') no-repeat;}
-			
-			#bus {position:relative;overflow:auto; height:110px; width:80%;}
-			#bus div {float:left; margin-left:30px; margin-right:30px; text-align:center;}
-			
-			#bus div ul li{}
-			#bus div ul li.on {display:block;}
-			#bus li.stopBy {color:red;}
-			#special {padding-bottom:10px;}
-			#searchBar input {width:30%;}
-			#searchBar #searchInputbox {width:65%;}
-			
-			#special h6 span {font-size:2em;}
-			#special h6 a span {color:red;}
-			#special h6 .detail {font-size:1em; padding-left:190px;}
-		
-			#wayPoint{font-size:8px;}
-			#wayPoint li {text-indent:-2000px;}
+body{margin:0; width:100%;}
+ul, ol{list-style-type:none;}
+p, ul, h1, h2, h3, h4, h5, h6{padding:0; margin:0;}
+a{text-decoration:none;}
+#doc {width:100%;}
+#doc a{color:#000;}
+
+div.menuList{overflow: hidden; width:100%; margin-bottom:10px; margin-top:10px;}
+div.menuList li{float:left; width:70px; height:80px; margin-right:5px; margin-left:5px;}
+.menuList li a{display:block; padding-top:70px; font-size:8px; text-align:center; background-size:70px; background:url('http://jejunubus.hosting.paran.com/images/che.jpg') no-repeat;}
+
+#bus {position:relative;overflow:auto; width:80%; height:110px;}
+#bus div {float:left; width:39%; margin: 0 5%; text-align:center;}
+
+#bus div ul li{}
+#bus div ul li.on {display:block;}
+#bus li.stopBy {color:red;}
+#special {padding-bottom:10px;}
+#searchBar input {width:30%;}
+#searchBar #searchInputbox {width:65%;}
+
+#special h6 span {font-size:2em;}
+#special h6 a span {color:red;}
+#special h6 .detail {font-size:1em; padding-left:190px;}

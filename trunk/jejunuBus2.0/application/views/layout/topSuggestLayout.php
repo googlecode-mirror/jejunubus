@@ -14,6 +14,19 @@
 	}
 	?>
 </div>
+<script src="http://jejunubus.hosting.paran.com/js/touchScroller.js"></script>
+<script src="http://jejunubus.hosting.paran.com/js/scrollbutton.js"></script>
+
+<script>
+
+var touchScrollableDivId = "bus";
+touchScroll(touchScrollableDivId);
+
+scrollbutton('bus');
+
+self.location.hash = 'bus';
+</script>
+
 <?php
 function showBusSchedule($busSchedule, $clsName=''){
 	$name = $busSchedule['name'];

@@ -37,10 +37,10 @@ function scrollbutton(div_id)
 	}
 	
 	var scroll_button_div = document.createElement("div");
-	scroll_button_div.style.width = '35px';
+	scroll_button_div.style.width = '10%';
 	scroll_button_div.style.height = div_to_scroll.offsetHeight;
 	//scroll_button_div.style.border = "1px solid black";
-	scroll_button_div.style.marginRight = "30px";
+	scroll_button_div.style.marginRight = "10%";
 	scroll_button_div.style.cssFloat = 'right'; // FF
 	scroll_button_div.style.styleFloat = 'right'; // IE
 	//div_to_scroll.parentNode.insertBefore(scroll_button_div, div_to_scroll);

@@ -7,27 +7,29 @@ class board extends	CI_Controller{
 	}
 	
 	function index(){
+		$this->page();
 	}
 	
-	function page($page = 1){
-		$this->load->database('jejunubus');		
-		$feedlimit = 0;
-		
-		/***
-		 * 게시글 작성 
-		 * Post 값 확인
-		 * FALSE = > Pass
-		 * !FALSE = > 게시글 등록
-		 */
+	function write(){
+		$this->load->database('jejunubus');
 		if(($this->input->post('title') != FALSE) && ($this->input->post('content') != FALSE)){
 			$data['no'] = NULL;
 			$data['name'] = $this->input->post('title');
 			$data['content'] = $this->input->post('content');
+			$data['user_agent'] = $_SERVER['HTTP_USER_AGENT']; 
 		
-			$this->db->insert('board',$data);	
+			$this->db->insert('board',$data);
 		}
 		
+		$this->load->helper('url');
+		redirect('/board/page/1', 'refresh');
 		
+	}
+	
+	function page($page = 1){
+		$this->load->database('jejunubus');
+		
+		$feedlimit = 0;
 		/***
 		 * page & 게시글 범위 지정
 		 */

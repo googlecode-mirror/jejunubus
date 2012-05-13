@@ -5,10 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/test/css/dormitoryCafeteria.css"/>
 <link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/css/common.css"/>
+<style>
+	.orginLink {text-align:right; display:block; }
+</style>
 </head>
 
 <body>
 	<div id='doc'>
+		<a class='orginLink' href="http://dormitory.jejunu.ac.kr/recipe/02.php">&#8730 기숙사 식당 페이지 바로가기</a>
 		<div id='menu'>
 			<?php foreach ($menu->result_array() as $meal):?>
 			<div>

@@ -1,0 +1,89 @@
+*
+{
+	-webkit-text-size-adjust:none;
+	padding:0;
+	margin:0;
+}
+
+#boardform
+{
+	float:left;
+	width:100% ;
+	height:auto;
+}
+
+#writeform
+{
+	float:left;
+	width:97% ;
+	padding:3px;
+	height:auto;
+	margin-bottom:10px;
+	background-color:aliceblue;
+}
+
+.viewform
+{
+	float:left;
+	width:97% ;
+	padding:3px;
+	height:50px,auto;
+	word-break:break-all;
+	background-color:aliceblue;
+	margin-bottom:10px;
+}
+
+#pageform
+{
+	float:left;
+	text-align:center;
+	width:29% ;
+	height:auto;
+	background-color:aliceblue;
+	margin-left:120px;
+	margin-right:120px;
+	font-size:20px;
+	margin-bottom:40px;
+}	
+
+.backpage
+{
+	float:left;
+	text-align:left;
+}
+
+.nextpage
+{
+	float:right;
+	text-align:right;
+}
+
+.name
+{
+	float:left;
+	width:auto;
+	margin-top:3px;
+	margin-left:3px;	
+}
+
+.submit
+{
+	float:right;
+	width:23% ;
+	height:auto;
+	margin-top:3px;
+	margin-right:3px;
+	word-break:break-all;
+}
+
+.content
+{
+	float:left;
+	margin-left:auto;
+	margin-right:auto;
+	width:94% ;
+	height:auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	overflow:inherit;
+}

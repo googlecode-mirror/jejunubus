@@ -4,9 +4,9 @@
 	<title>제주대순환버스</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/css/mainView.css">
+		<link rel="stylesheet" type="text/css" href="../resource/css/mainView.css">
 		
-		<script src="http://jejunubus.hosting.paran.com/js/googleAnalytics.js"></script>
+		<script src="../resource/js/googleAnalytics.js"></script>
 	</head>
 	<body>
 		<div id='doc'>
@@ -16,7 +16,7 @@
 					<input type="submit" value="찾아봅시다!!"></input>
 				</form>
 			</div>
-			<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/board.js"></script>
+			<script type="text/javascript" src="../resource/js/board.js"></script>
 			<script type="text/javascript">
 				clearText('searchInputbox');	
 			</script>
@@ -56,8 +56,8 @@
 						<?php endforeach;?>
 					</ul>
 				</div>
-				<script src="http://jejunubus.hosting.paran.com/js/touchScroller.js"></script>
-				<script src="http://jejunubus.hosting.paran.com/js/scrollbutton.js"></script>
+				<script src="../resource/js/touchScroller.js"></script>
+				<script src="../resource/js/scrollbutton.js"></script>
 				
 				<script type="text/javascript">
 				var touchScrollableDivId = "bus";
@@ -95,7 +95,7 @@
 							aas[0].onclick = function(){alert(path);};
 					</script>
 				</div>
-				<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/libBus.js"></script>
+				<script type="text/javascript" src="../resource/js/libBus.js"></script>
 				<script type="text/javascript">
 					var fx = new Fx({target:'bus', idSet:{wayPoint:'wayPoint'}});
 				</script>

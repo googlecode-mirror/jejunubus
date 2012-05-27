@@ -4,7 +4,7 @@
 	<title>제주대순환버스</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/css/common.css">
+		<link rel="stylesheet" type="text/css" href="../resource/css/common.css">
 		
 		<style type="text/css">
 			#top li {float:left; margin-right:26px;}

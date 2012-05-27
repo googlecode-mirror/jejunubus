@@ -4,8 +4,7 @@
 	<title>제주대 순환버스 for Smart phone</title>
 	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
-	<link rel=shortcutIcon href=./img/shortcutIcon.png />
-	<link rel="stylesheet" type="text/css" href="http://jejunubus.hosting.paran.com/css/board.css">
+	<link rel="stylesheet" type="text/css" href="../../../resource/css/board.css">
 </head>
 <body>
 	<div id=boardform>
@@ -15,7 +14,7 @@
 				<input id=author class=name type=text name=title value=작성자> 
 				<input class=submit type=submit value=Submit>
 			</form>
-			<script type="text/javascript" src="http://jejunubus.hosting.paran.com/js/formValid.js"></script> 
+			<script type="text/javascript" src="../../../resource/js/formValid.js"></script> 
 			<script type="text/javascript">
 				var validForm = valid();
 				var author = document.getElementById('author');

@@ -1,30 +1,26 @@
 <div id='bus'>
-	<?php
-	if(isset($goUpBus)){
-		showBusSchedule($goUpBus, 'goUp');
-	}
-	if(isset($goDownBus)){
-		showBusSchedule($goDownBus, 'goDown');
-	}
-	if(isset($libBus)){
-		showBusSchedule($libBus, 'libBus');
-	}
-	if(isset($weather)){
-		showWeatherToday($weather);
-	}
-	?>
+	<div id='scroll'>
+		<?php
+		if(isset($goUpBus)){
+			showBusSchedule($goUpBus, 'goUp');
+		}
+		if(isset($goDownBus)){
+			showBusSchedule($goDownBus, 'goDown');
+		}
+		if(isset($libBus)){
+			showBusSchedule($libBus, 'libBus');
+		}
+		if(isset($weather)){
+			showWeatherToday($weather);
+		}
+		?>
+	</div>
 </div>
-<script src="http://jejunubus.hosting.paran.com/js/touchScroller.js"></script>
-<script src="http://jejunubus.hosting.paran.com/js/scrollbutton.js"></script>
 
-<script>
-
-var touchScrollableDivId = "bus";
-touchScroll(touchScrollableDivId);
-
-scrollbutton('bus');
-
-self.location.hash = 'bus';
+<script type="text/javascript" src="../resource/js/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+	myScroll = new iScroll('bus');
 </script>
 
 <?php

@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="user-scalable=yes">
 	<style type="text/css">
-		iframe {border:none; height:600px;}
+		iframe {border:none; width:100%; height:600px;}
 		.roomList {font-size:2.5em; font-weight:bold;}
 		.roomList {margin-bottom:20%;}
 		.roomList li{float:right; list-style:none; margin:0 1% 8% 1%;}

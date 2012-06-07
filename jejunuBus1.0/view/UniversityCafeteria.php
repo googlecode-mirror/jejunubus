@@ -1,1 +1,0 @@
-<iframe src = http://www.jejunu.ac.kr/enboard/boardread.jsp?id=11&no=1245154925704&fname=viewFrame></iframe>

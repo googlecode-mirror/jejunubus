@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id='doc'>
-		<iframe id='resultBox' src='http://203.253.194.57/MAPTEMP/1_180.182.28.169.html'></iframe>
+		<iframe id='resultBox' src='http://203.253.194.57/MAPTEMP/1_211.246.70.55.html'></iframe>
 		<ul class='roomList'>
 			<li><a href='http://203.253.194.57/MAPTEMP/1_211.246.70.55.html'>1열람실</a></li>
 			<li><a href='http://203.253.194.57/MAPTEMP/2_211.246.70.55.html'>2열람실</a></li>

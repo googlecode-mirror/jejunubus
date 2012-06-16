@@ -17,13 +17,13 @@
 	<div id='doc'>
 		<iframe id='resultBox' src='http://203.253.194.57/MAPTEMP/1_180.182.28.169.html'></iframe>
 		<ul class='roomList'>
-			<li><a href='http://203.253.194.57/MAPTEMP/1_180.182.28.169.html'>1열람실</a></li>
-			<li><a href='http://203.253.194.57/MAPTEMP/2_180.182.28.169.html'>2열람실</a></li>
-			<li><a href='http://203.253.194.57/MAPTEMP/6_180.182.28.169.html'>3열람실</a></li>
-			<li><a href='http://203.253.194.57/MAPTEMP/7_180.182.28.169.html'>4열람실</a></li>
-			<li><a href='http://203.253.194.57/MAPTEMP/8_180.182.28.169.html'>5열람실</a></li>
-			<li><a href='http://203.253.194.57/MAPTEMP/9_180.182.28.169.html'>6열람실</a></li>
-			<li><a href='http://203.253.194.57/MAPTEMP/10_180.182.28.169.html'>자유열람실</a></li>
+			<li><a href='http://203.253.194.57/MAPTEMP/1_211.246.70.55.html'>1열람실</a></li>
+			<li><a href='http://203.253.194.57/MAPTEMP/2_211.246.70.55.html'>2열람실</a></li>
+			<li><a href='http://203.253.194.57/MAPTEMP/6_211.246.70.55.html'>3열람실</a></li>
+			<li><a href='http://203.253.194.57/MAPTEMP/7_211.246.70.55.html'>4열람실</a></li>
+			<li><a href='http://203.253.194.57/MAPTEMP/8_211.246.70.55.html'>5열람실</a></li>
+			<li><a href='http://203.253.194.57/MAPTEMP/9_211.246.70.55.html'>6열람실</a></li>
+			<li><a href='http://203.253.194.57/MAPTEMP/10_211.246.70.55.html'>자유열람실</a></li>
 		</ul>
 		<script>
 			function showResultToIframe(ele){

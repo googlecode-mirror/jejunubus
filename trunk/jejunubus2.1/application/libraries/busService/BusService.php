@@ -1,4 +1,4 @@
-<?
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
 class BusService{
 	
 	var $goUpBus = array(800, 812, 824, 836, 848, 900, 912, 924, 936, 948,

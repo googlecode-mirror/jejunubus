@@ -77,6 +77,7 @@ class board extends	CI_Controller{
 		foreach ($query->result_array() as $row) {
 			$feed['name'] = $row['name'];
 			$feed['content'] = $row['content'];
+			$feed['comment'] = $row['comment'];
 			$data['feed'] = $data['feed'] . $this->load->view('board/feed',$feed,true);
 		}
 

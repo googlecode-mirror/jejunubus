@@ -9,7 +9,7 @@
 <body>
 	<div id=boardform>
 		<div id=writeform>
-			<form method=post action='../write'>
+			<form id=boardF method=post action='../write'>
 				<textarea id=comment class=content rows=5 cols=40 name=content>좋은 의견 많이 주세요~ *^^*</textarea>
 				<input id=author class=name type=text name=title value=작성자> 
 				<input class=submit type=submit value=Submit>
@@ -24,6 +24,17 @@
 											{ele:author, defaultText:'작성자'});
 				validForm.setDefultText(validFormat);
 				btn.onclick = validForm.onValid(validFormat);
+
+				<!-- iphone에서 같은 주소로 post요청을 이전에 저장된 데이터가 날아가는것 방지. -->
+				var date = new Date();
+				var hhmmssmm = date.getHours();
+				hhmmssmm = hhmmssmm+""+date.getMinutes();
+				hhmmssmm = hhmmssmm+""+date.getSeconds();
+				hhmmssmm = hhmmssmm+""+date.getMilliseconds();
+
+				var f = document.getElementById('boardF');
+
+				f.action = f.action +"?requestDate="+hhmmssmm;
 			</script>
 		</div>
 	

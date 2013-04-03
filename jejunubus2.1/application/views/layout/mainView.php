@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html manifest="../manifest.appcache">
 	<head>
 	<title>제주대순환버스</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">

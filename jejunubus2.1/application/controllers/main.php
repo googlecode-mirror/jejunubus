@@ -16,12 +16,9 @@ class main extends CI_Controller{
 		$this->load->library('busService/BusService');
 		
 		$bs = new BusService();
-		if($time > 730 && $time < 2000){
-			$data['goUpBus'] = $bs->getGoUpBusSchedule();
-			$data['goDownBus'] = $bs->getGoDownBusSchedule();
-		}else{
-			$data['libBus'] = $bs->getLibBusSchedule();
-		}	
+		$data['goUpBus'] = $bs->getGoUpBusSchedule();
+		$data['goDownBus'] = $bs->getGoDownBusSchedule();
+		$data['libBus'] = $bs->getLibBusSchedule();
 		//도서관 버스 필요.
 		// 스크롤 버튼 필요.
 		$data['weatherToday'] = 'should Todays RealTime Weather';

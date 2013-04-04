@@ -12,16 +12,24 @@
 		<li class="dormitoryCafeteria">
 			<a id='citybus' title="제주 시내버스 출발 시간표" href='jeju_citybus'>제대출발 시내버스</a>
 			<script>
-			var date = new Date();
-			var hhmm = date.getHours();
-			hhmm = hhmm+""+date.getMinutes();
-			var citybus = document.getElementById('citybus');
-			citybus.href = citybus.href+'?clientTime='+hhmm;
+				var city = new Hammer(document.getElementById('citybus'));
+
+				city.ontap = function(ev){
+					var date = new Date();
+					var hh = date.getHours();
+					var mm = date.getMinutes();
+
+					if(10 > mm * 1)
+						mm = "0"+mm;
+
+					var citybus = document.getElementById('citybus');
+					citybus.href = citybus.href+'?clientTime='+hh +""+ mm;
+				}
 			</script>
 		</li>
-		<li class="universityDomitory">
+		<!--<li class="universityDomitory">
 			<a title="제대 도서관" href='librarie/meetingRoom'>중도나이트</a>
-		</li>
+		</li> -->
 		<li class="opinionBoard">
 			<a title="의견 게시판" href='board/page/1'>의견게시판</a>
 		</li>

@@ -1,0 +1,18 @@
+CACHE MANIFEST
+
+# 2013.04.03 v0.0.4
+
+CACHE:
+index.php/main
+index.php/contributor
+resource/js/iscroll.js
+resource/css/mainView.css
+
+NETWORK:
+*
+
+FALLBACK:
+index.php/main
+index.php/contributor
+resource/js/iscroll.js
+resource/css/mainView.css

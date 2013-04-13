@@ -1,0 +1,14 @@
+소스 파일에 라이센스 내용 첨부해주세요.
+
+신관 메뉴 파싱 - 너무 느림...
+
+데이터베이스 관리하는 유틸 있으면 좋을듯??(
+updateContent/dormitory/dormitoryDatabase.php,
+						-dormitoryDatabaseFactory.php,
+lib/read_board.php,
+	-mysqldb.php  
+) DB커넥션 정보나, 기타 정보들 중복 있음.
+	
+아이디어 게시판 사이즈 자동 조절
+
+기타 필요한 내용들 작성해주세요. ㅋㅋ

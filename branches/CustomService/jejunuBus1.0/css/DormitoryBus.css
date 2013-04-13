@@ -1,0 +1,19 @@
+@CHARSET "EUC-KR";
+
+#schedule ul{
+	list-style-type: none;
+	float: left;
+}
+
+#extra {
+	color: #FF0000;
+}
+h6{
+	font-size: 10px;
+	margin: 0px;
+}
+h5{
+	font-size: 10px;
+	margin: 0px;
+	color: #ff0000;
+}
